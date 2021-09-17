@@ -1,0 +1,11 @@
+@mixin breakpoint($point) {
+  @if $point == "tablet" {
+    @media screen and (min-width: 48em) {
+      @content;
+    }
+  } @else if $point == "desktop" {
+    @media screen and (min-width: 76.5em) {
+      @content;
+    }
+  }
+}

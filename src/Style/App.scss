@@ -1,0 +1,55 @@
+@use './Utilities' as *;
+
+.wrapper {
+  padding: 0 rem(20);
+  margin: 0 auto;
+
+  @include breakpoint("tablet") {
+    max-width: rem(700);
+    padding: 0 rem(25);
+  }
+
+  @include breakpoint("desktop") {
+    max-width: rem(1300);
+  }
+}
+
+.btn {
+  border: none;
+  border-radius: rem(5);
+  font-weight: 500;
+  font-size: rem(16);
+  position: relative;
+  display: block;
+  cursor: pointer;
+
+  &__content {
+    will-change: transform;
+    transition: transform 250ms;
+    display: block;
+    padding: rem(8) rem(20);
+    border-radius: inherit;
+    transform: translateY(-4px);
+    color: $darkGreen;
+  }
+
+  &:hover &__content {
+    transform: translateY(-6px);
+  }
+
+  &:active &__content {
+    transform: translateY(-2px);
+  }
+
+  &--animal {
+    background-color: $darkGreen;
+    color: $darkGreen;
+  }
+  &--dev {
+    background-color: $darkOrange;
+  }
+
+  &--history {
+    background-color: $darkBlue;
+  }
+}

@@ -1,0 +1,45 @@
+@use '../Utilities' as *;
+.header {
+  position: sticky;
+  top: 0;
+  left: 0;
+  background-color: $white;
+  box-shadow: 0 rem(1) rem(10) $black;
+  z-index: 2;
+  &__nav {
+    padding: rem(20) 0;
+  }
+  &__list {
+    display: flex;
+    justify-content: center;
+  }
+  &__item {
+    &:nth-child(2) {
+      margin: 0 rem(20);
+    }
+  }
+
+  &__link {
+    text-decoration: none;
+    color: $black;
+    font-weight: 700;
+    transition: 250ms;
+    font-size: rem(18);
+
+    &--animal {
+      &:hover {
+        color: $green;
+      }
+    }
+    &--dev {
+      &:hover {
+        color: $orange;
+      }
+    }
+    &--history {
+      &:hover {
+        color: $blue;
+      }
+    }
+  }
+}

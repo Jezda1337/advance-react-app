@@ -1,0 +1,15 @@
+@use '../Utilities/' as *;
+
+.placeholder {
+  width: 100%;
+  min-height: rem(270);
+  height: 100%;
+  margin-bottom: rem(30);
+
+  @include breakpoint("tablet") {
+    min-height: rem(220);
+  }
+  @include breakpoint("desktop") {
+    min-height: rem(300);
+  }
+}

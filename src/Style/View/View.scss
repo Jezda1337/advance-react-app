@@ -1,0 +1,94 @@
+@use '../Utilities' as *;
+
+.view {
+  &__header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin: rem(40) 0;
+
+    @include breakpoint("desktop") {
+      flex-direction: row;
+      justify-content: space-between;
+      align-items: flex-end;
+    }
+  }
+
+  &__logo {
+    max-width: rem(140);
+    margin-bottom: rem(40);
+
+    @include breakpoint("tablet") {
+      max-width: rem(200);
+    }
+    @include breakpoint("desktop") {
+      margin: 0;
+    }
+  }
+
+  &__logo-img {
+    &:hover {
+      animation: shake 0.5s;
+    }
+  }
+  @keyframes shake {
+    0% {
+      transform: rotate(0);
+    }
+    10% {
+      transform: rotate(-3deg);
+    }
+    20% {
+      transform: rotate(0);
+    }
+    30% {
+      transform: rotate(-3deg);
+    }
+    40% {
+      transform: rotate(0);
+    }
+    50% {
+      transform: rotate(-3deg);
+    }
+    60% {
+      transform: rotate(0);
+    }
+    70% {
+      transform: rotate(-3deg);
+    }
+    80% {
+      transform: rotate(0);
+    }
+    90% {
+      transform: rotate(-3deg);
+    }
+    100% {
+      transform: rotate(0);
+    }
+  }
+
+  &__cards {
+    @include breakpoint("desktop") {
+      display: flex;
+      flex-direction: row;
+      gap: rem(30);
+    }
+  }
+  &__subTitle {
+    margin: rem(50) 0;
+    text-align: center;
+    color: $darkGreen;
+
+    @include breakpoint("desktop") {
+      text-align: left;
+    }
+  }
+
+  &__seenCards {
+    @include breakpoint("desktop") {
+      max-width: rem(800);
+      margin: 0 auto;
+    }
+  }
+}

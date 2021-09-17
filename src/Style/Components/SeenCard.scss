@@ -1,0 +1,8 @@
+@use '../Utilities' as *;
+
+.seenCard {
+  margin-bottom: rem(10);
+  border-radius: rem(10);
+  padding: rem(15) rem(10);
+  color: $darkGreen;
+}
